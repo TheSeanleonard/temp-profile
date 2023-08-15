@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega_TheLEGEND - About Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .profile-image {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+    .bio {
+      margin-top: 20px;
+    }
+    .social-links {
+      margin-top: 20px;
+    }
+    .social-links a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 24px;
+    }
+    .projects-section {
+      margin-top: 40px;
+    }
+    .project {
+      margin: 20px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      text-align: left;
+    }
+    .project h2 {
+      margin-top: 0;
+    }
+    .project-description {
+      margin-top: 10px;
+    }
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+body.dark-mode .project-description {
+      color: #000; /* Adjust the color for readability */
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Check if the user prefers dark mode
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+  
+  <div class="container">
+    <img src="profile-image.jpg" alt="Mega_TheLEGEND" class="profile-image">
+    <h1>Mega_TheLEGEND</h1>
+    <p class="bio">Passionate about coding, gaming, and technology. Turning coffee into code!</p>
+    <div class="social-links">
+      <a href="https://github.com/Mega_TheLEGEND" target="_blank" rel="noopener noreferrer">
+        <img src="github-icon.png" alt="GitHub">
+      </a>
+      <a href="https://megathelegend.github.io" target="_blank" rel="noopener noreferrer">
+        <img src="website-icon.png" alt="Website">
+      </a>
+    </div>
+    
+    <div class="projects-section">
+      <div class="project">
+        <h2><a href="https://math-assist.github.io">MATH.assist</a></h2>
+        <p class="project-description">Games website with educational math games.</p>
+      </div>
+      <div class="project">
+        <h2><a href="https://megathelegend.github.io/FileZ-client">File-Z</a></h2>
+        <p class="project-description">Another games website running in the file:// protocol.</p>
+      </div>
+        <div class="project">
+        <h2><a href="https://megathelegend.github.io/unnecessary">Unnecessary</a></h2>
+        <p class="project-description">A full langauge.</p>
+      </div>
+      <!-- Add more projects as needed -->
+    </div>
+  </div>
+</body>
+</html>
