@@ -113,7 +113,7 @@
           align-items: center;
           top: 13.5px;
           position: relative;
-          left: 30px;
+          left: 33px;
           width: 50px;
       }
 
@@ -159,6 +159,28 @@
       input[type="checkbox"]:checked + .darkmodeSlider:before {
           transform: translateX(18px);
       }
+      #lightIcon {
+          align-items: center;
+          top: 13.5px;
+          position: absolute;
+          left: 7px;
+          width: 20px;
+          height: auto;
+          display: flex;
+          filter: invert(1);
+      }
+      #darkIcon {
+          align-items: center;
+          top: 13.5px;
+          position: absolute;
+          left: 81px;
+          width: 20px;
+          height: auto;
+          display: flex;
+          filter: invert(1);
+      }
+
+
       /* end darkmode slider styles */
 
 
@@ -169,12 +191,14 @@
 </head>
 <body>
     <div class="header">
+        <img id="lightIcon" src="assets/light-mode.svg" alt="lightIcon">
         <div class="slider-container">
             <label class="switch">
                 <input type="checkbox" id="darkmodeSlider">
                 <span class="darkmodeSlider"></span>
             </label>
         </div>
+        <img id="darkIcon" src="assets/dark-mode.png" alt="darkIcon">
         <div class="social-links">
             <a href="https://github.com/MegaTheLEGEND" target="_blank" rel="noopener noreferrer">
                 <img id="giticon" src="assets/github-icon.png" alt="GitHub">
