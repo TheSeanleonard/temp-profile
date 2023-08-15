@@ -63,41 +63,67 @@ body.dark-mode .project-description {
   </style>
 </head>
 <body>
-  <script>
-    // Check if the user prefers dark mode
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.body.classList.add('dark-mode');
-    }
-  </script>
-  
-  <div class="container">
-    <img src="profile-image.jpg" alt="Mega_TheLEGEND" class="profile-image">
-    <h1>Mega_TheLEGEND</h1>
-    <p class="bio">Passionate about coding, gaming, and technology. Turning coffee into code!</p>
-    <div class="social-links">
-      <a href="https://github.com/Mega_TheLEGEND" target="_blank" rel="noopener noreferrer">
-        <img src="github-icon.png" alt="GitHub">
-      </a>
-      <a href="https://megathelegend.github.io" target="_blank" rel="noopener noreferrer">
-        <img src="website-icon.png" alt="Website">
-      </a>
+    <script>
+        // Check if the user prefers dark mode
+        //if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // document.body.classList.add('dark-mode');
+        // }
+    </script>
+
+    <div class="container">
+        <img src="assets/pfp.jpg" alt="Mega_TheLEGEND" class="profile-image">
+        <h1>Mega_TheLEGEND</h1>
+        <p class="bio">Passionate about coding, gaming, and technology. Turning coffee into code!</p>
+        <div class="social-links">
+            <a href="https://github.com/Mega_TheLEGEND" target="_blank" rel="noopener noreferrer">
+                <img src="github-icon.png" alt="GitHub">
+            </a>
+            <a href="https://megathelegend.github.io" target="_blank" rel="noopener noreferrer">
+                <img src="website-icon.png" alt="Website">
+            </a>
+        </div>
+
+        <div class="projects-section">
+            <div class="project">
+                <h2><a href="https://math-assist.github.io">MATH.assist</a></h2>
+                <p class="project-description">Games website with educational math games.</p>
+            </div>
+            <div class="project">
+                <h2><a href="https://megathelegend.github.io/FileZ-client">File-Z</a></h2>
+                <p class="project-description">Another games website running in the file:// protocol.</p>
+            </div>
+            <div class="project">
+                <h2><a href="https://megathelegend.github.io/unnecessary">Unnecessary</a></h2>
+                <p class="project-description">A full langauge.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
     </div>
-    
-    <div class="projects-section">
-      <div class="project">
-        <h2><a href="https://math-assist.github.io">MATH.assist</a></h2>
-        <p class="project-description">Games website with educational math games.</p>
-      </div>
-      <div class="project">
-        <h2><a href="https://megathelegend.github.io/FileZ-client">File-Z</a></h2>
-        <p class="project-description">Another games website running in the file:// protocol.</p>
-      </div>
-        <div class="project">
-        <h2><a href="https://megathelegend.github.io/unnecessary">Unnecessary</a></h2>
-        <p class="project-description">A full langauge.</p>
-      </div>
-      <!-- Add more projects as needed -->
-    </div>
-  </div>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+            new Darkmode().showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+
+        const options = {
+            bottom: '64px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '32px', // default: 'unset'
+            time: '0.5s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: '#fff',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: false, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+
+    </script>
+
 </body>
 </html>
