@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mega_TheLEGEND - About Me</title>
   <style>
+      @font-face {
+          font-family: unnecessary;
+          src: url('assets/unnecessaryv3.ttf');
+      } 
+      a {
+          text-decoration: none;
+      }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -38,16 +45,18 @@
     .projects-section {
       margin-top: 40px;
     }
-    .project {
-      margin: 20px;
-      padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      text-align: left;
-    }
+      .project {
+          margin: 20px;
+          padding: 20px;
+          background-color: white;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+          text-align: left;
+          text-decoration: none;
+      }
     .project h2 {
       margin-top: 0;
+
     }
     .project-description {
       margin-top: 10px;
@@ -60,6 +69,14 @@
 body.dark-mode .project-description {
       color: #000; /* Adjust the color for readability */
     }
+      #giticon {
+          width: 50px;
+          height: auto;
+      }
+      #unnecessary-project{
+          font-family: unnecessary;
+      }
+
   </style>
 </head>
 <body>
@@ -76,7 +93,7 @@ body.dark-mode .project-description {
         <p class="bio">Passionate about coding, gaming, and technology. Turning coffee into code!</p>
         <div class="social-links">
             <a href="https://github.com/Mega_TheLEGEND" target="_blank" rel="noopener noreferrer">
-                <img src="github-icon.png" alt="GitHub">
+                <img id="giticon" src="assets/github-icon.png" alt="GitHub">
             </a>
             <a href="https://megathelegend.github.io" target="_blank" rel="noopener noreferrer">
                 <img src="website-icon.png" alt="Website">
@@ -93,7 +110,7 @@ body.dark-mode .project-description {
                 <p class="project-description">Another games website running in the file:// protocol.</p>
             </div>
             <div class="project">
-                <h2><a href="https://megathelegend.github.io/unnecessary">Unnecessary</a></h2>
+                <h2><a id="unnecessary-project" href="https://megathelegend.github.io/unnecessary">Unnecessary</a></h2>
                 <p class="project-description">A full langauge.</p>
             </div>
             <!-- Add more projects as needed -->
@@ -102,27 +119,24 @@ body.dark-mode .project-description {
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script>
         function addDarkmodeWidget() {
-            new Darkmode().showWidget();
+            const options = {
+                bottom: '32px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '32px', // default: 'unset'
+                time: '0.5s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: '#fff',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#0d1117', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
         }
         window.addEventListener('load', addDarkmodeWidget);
-
-        const options = {
-            bottom: '64px', // default: '32px'
-            right: 'unset', // default: '32px'
-            left: '32px', // default: 'unset'
-            time: '0.5s', // default: '0.3s'
-            mixColor: '#fff', // default: '#fff'
-            backgroundColor: '#fff',  // default: '#fff'
-            buttonColorDark: '#100f2c',  // default: '#100f2c'
-            buttonColorLight: '#fff', // default: '#fff'
-            saveInCookies: false, // default: true,
-            label: '🌓', // default: ''
-            autoMatchOsTheme: true // default: true
-        }
-
-        const darkmode = new Darkmode(options);
-        darkmode.showWidget();
-
     </script>
 
 </body>
