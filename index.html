@@ -23,7 +23,7 @@
           width: 100%;
           height: 50px;
           margin: 0 auto;
-          text-align: center;
+          text-align: right;
           background-color: #1e1e1e;
       }
       .darkmode--activated .header {
@@ -61,7 +61,7 @@
           padding: 24px;
           background-color: #fff;
           box-shadow: 0 0 12px rgba(0, 0, 0, .3);
-          border-radius: 43px;
+          border-radius: 15px;
           text-align: left;
           text-decoration: none;
           width: 50%;
@@ -75,12 +75,13 @@
     }
 
       #giticon {
-          width: 50px;
+          width: 40px;
           height: auto;
-      }
-      .darkmode--activated #giticon {
+          top: -35px;
+          position: relative;
           filter: invert(1);
       }
+
       #unnecessary-project {
           background-image: linear-gradient(45deg, indianred, grey);
       }
@@ -103,6 +104,8 @@
               width: 50px;
               padding-right: 14px;
           }
+
+          /* begin darkmode slider styles */
       .slider-container {
           display: flex;
           align-items: center;
@@ -154,6 +157,7 @@
       input[type="checkbox"]:checked + .darkmodeSlider:before {
           transform: translateX(20px);
       }
+      /* end darkmode slider styles */
 
 
   </style>
@@ -166,18 +170,17 @@
                 <span class="darkmodeSlider"></span>
             </label>
         </div>
-
+        <div class="social-links">
+            <a href="https://github.com/MegaTheLEGEND" target="_blank" rel="noopener noreferrer">
+                <img id="giticon" src="assets/github-icon.png" alt="GitHub">
+            </a>
+        </div>
     </div>
 
     <div class="container">
         <img src="assets/pfp.jpg" alt="Mega_TheLEGEND" class="profile-image">
         <h1>Mega_TheLEGEND</h1>
         <p class="bio">Passionate about coding, gaming, and technology. Turning boredom into code!</p>
-        <div class="social-links">
-            <a href="https://github.com/MegaTheLEGEND" target="_blank" rel="noopener noreferrer">
-                <img id="giticon" src="assets/github-icon.png" alt="GitHub">
-            </a>
-        </div>
 
         <div class="projects-section">
             <div id="math-project" class="project">
