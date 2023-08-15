@@ -19,6 +19,16 @@
       padding: 0;
       background-color: #f0f0f0;
     }
+      .header {
+          width: 100%;
+          height: 50px;
+          margin: 0 auto;
+          text-align: center;
+          background-color: #1e1e1e;
+      }
+      .darkmode--activated .header {
+          background-color: #e1e1e1;
+      }
     .container {
       max-width: 960px;
       margin: 0 auto;
@@ -63,14 +73,7 @@
     .project-description {
       margin-top: 10px;
     }
-    /* Dark mode styles */
-    body.dark-mode {
-      background-color: #333;
-      color: #fff;
-    }
-body.dark-mode .project-description {
-      color: #000; /* Adjust the color for readability */
-    }
+
       #giticon {
           width: 50px;
           height: auto;
@@ -100,10 +103,72 @@ body.dark-mode .project-description {
               width: 50px;
               padding-right: 14px;
           }
+      .slider-container {
+          display: flex;
+          align-items: center;
+          top: 13.5px;
+          position: relative;
+          left: 50px;
+          width: 50px;
+      }
+
+      .switch {
+          position: relative;
+          display: inline-block;
+          width: 40px;
+          height: 20px;
+      }
+
+          .switch input[type="checkbox"] {
+              display: none;
+          }
+
+      .darkmodeSlider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          transition: 0.4s;
+          border-radius: 20px;
+      }
+
+      .darkmodeSlider:before {
+          position: absolute;
+          content: "";
+          height: 18px;
+          width: 18px;
+          left: 2px;
+          bottom: 1px;
+          background-color: white;
+          transition: 0.4s;
+          border-radius: 50%;
+      }
+
+      input[type="checkbox"]:checked + .darkmodeSlider {
+          background-color: #ffd700;
+      }
+
+      input[type="checkbox"]:checked + .darkmodeSlider:before {
+          transform: translateX(20px);
+      }
+
 
   </style>
 </head>
 <body>
+    <div class="header">
+        <div class="slider-container">
+            <label class="switch">
+                <input type="checkbox" id="darkmodeSlider">
+                <span class="darkmodeSlider"></span>
+            </label>
+        </div>
+
+    </div>
+
     <div class="container">
         <img src="assets/pfp.jpg" alt="Mega_TheLEGEND" class="profile-image">
         <h1>Mega_TheLEGEND</h1>
@@ -147,9 +212,28 @@ body.dark-mode .project-description {
             }
 
             const darkmode = new Darkmode(options);
-            darkmode.showWidget();
+            
+        const slider = document.getElementById('darkmodeSlider');
+
+        slider.addEventListener('click', () => {
+            
+            if (slider.checked) {
+                darkmode.toggle();
+                console.log('Slider is ON');
+            } else {
+                darkmode.toggle();
+                console.log('Slider is OFF');
+            }
+        });
 
 
+        window.addEventListener('load', () => {
+
+                const darkModeActivated = document.body.classList.contains('darkmode--activated');
+                slider.checked = darkModeActivated;
+
+
+        });
 
 
     </script>
