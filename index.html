@@ -8,9 +8,10 @@
       @font-face {
           font-family: unnecessary;
           src: url('assets/unnecessaryv3.ttf');
-      } 
+      }
       a {
           text-decoration: none;
+          color: Black;
       }
     body {
       font-family: Arial, sans-serif;
@@ -46,13 +47,14 @@
       margin-top: 40px;
     }
       .project {
-          margin: 20px;
-          padding: 20px;
-          background-color: white;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          border-radius: 5px;
+          margin: 30px;
+          padding: 24px;
+          background-color: #fff;
+          box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+          border-radius: 43px;
           text-align: left;
           text-decoration: none;
+          width: 50%;
       }
     .project h2 {
       margin-top: 0;
@@ -73,44 +75,56 @@ body.dark-mode .project-description {
           width: 50px;
           height: auto;
       }
-      #unnecessary-project{
+      .darkmode--activated #giticon {
+          filter: invert(1);
+      }
+      #unnecessary-project {
+          background-image: linear-gradient(45deg, indianred, grey);
+      }
+      #unnecessary-project h2{
           font-family: unnecessary;
       }
+      #filez-project {
+          width: 70%;
+          background-image: linear-gradient(45deg, red, green, blue);
+      }
+      #filez-project img {
+          width: 50px;
+          padding-right: 14px;
+      }
+      #math-project {
+          width: 59%;
+          background-image: linear-gradient(45deg, yellow, #2196f3);
+      }
+          #math-project img {
+              width: 50px;
+              padding-right: 14px;
+          }
 
   </style>
 </head>
 <body>
-    <script>
-        // Check if the user prefers dark mode
-        //if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // document.body.classList.add('dark-mode');
-        // }
-    </script>
-
     <div class="container">
         <img src="assets/pfp.jpg" alt="Mega_TheLEGEND" class="profile-image">
         <h1>Mega_TheLEGEND</h1>
         <p class="bio">Passionate about coding, gaming, and technology. Turning coffee into code!</p>
         <div class="social-links">
-            <a href="https://github.com/Mega_TheLEGEND" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/MegaTheLEGEND" target="_blank" rel="noopener noreferrer">
                 <img id="giticon" src="assets/github-icon.png" alt="GitHub">
-            </a>
-            <a href="https://megathelegend.github.io" target="_blank" rel="noopener noreferrer">
-                <img src="website-icon.png" alt="Website">
             </a>
         </div>
 
         <div class="projects-section">
-            <div class="project">
-                <h2><a href="https://math-assist.github.io">MATH.assist</a></h2>
+            <div id="math-project" class="project">
+                <h2><img src="https://raw.githubusercontent.com/MegaTheLEGEND/legend/main/EmbeddedImage.png" alt=""><a href="https://math-assist.github.io">MATH.assist</a></h2>
                 <p class="project-description">Games website with educational math games.</p>
             </div>
-            <div class="project">
-                <h2><a href="https://megathelegend.github.io/FileZ-client">File-Z</a></h2>
+            <div id="filez-project" class="project">
+                <h2><img src="assets/z.png" alt=""><a href="https://megathelegend.github.io/FileZ-client">File-Z</a></h2>
                 <p class="project-description">Another games website running in the file:// protocol.</p>
             </div>
-            <div class="project">
-                <h2><a id="unnecessary-project" href="https://megathelegend.github.io/unnecessary">Unnecessary</a></h2>
+            <div id="unnecessary-project" class="project">
+                <h2><a  href="https://megathelegend.github.io/unnecessary">Unnecessary</a></h2>
                 <p class="project-description">A full langauge.</p>
             </div>
             <!-- Add more projects as needed -->
@@ -118,7 +132,6 @@ body.dark-mode .project-description {
     </div>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script>
-        function addDarkmodeWidget() {
             const options = {
                 bottom: '32px', // default: '32px'
                 right: 'unset', // default: '32px'
@@ -126,8 +139,8 @@ body.dark-mode .project-description {
                 time: '0.5s', // default: '0.3s'
                 mixColor: '#fff', // default: '#fff'
                 backgroundColor: '#fff',  // default: '#fff'
-                buttonColorDark: '#100f2c',  // default: '#100f2c'
-                buttonColorLight: '#0d1117', // default: '#fff'
+                buttonColorDark: '#0d1117',  // default: '#100f2c'
+                buttonColorLight: 'white', // default: '#fff'
                 saveInCookies: true, // default: true,
                 label: '🌓', // default: ''
                 autoMatchOsTheme: true // default: true
@@ -135,8 +148,10 @@ body.dark-mode .project-description {
 
             const darkmode = new Darkmode(options);
             darkmode.showWidget();
-        }
-        window.addEventListener('load', addDarkmodeWidget);
+
+
+
+
     </script>
 
 </body>
