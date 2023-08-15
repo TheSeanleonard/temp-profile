@@ -1,190 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mega_TheLEGEND - About Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega_TheLEGEND - About Me</title>
 
 
-  <style>
-      @font-face {
-          font-family: unnecessary;
-          src: url('assets/unnecessaryv3.ttf');
-      }
-      a {
-          text-decoration: none;
-          color: Black;
-      }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
-      .header {
-          width: 100%;
-          height: 50px;
-          margin: 0 auto;
-          text-align: right;
-          background-color: #1e1e1e;
-      }
-      .darkmode--activated .header {
-          background-color: #e1e1e1;
-      }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-    .profile-image {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-    }
-    .bio {
-      margin-top: 20px;
-    }
-    .social-links {
-      margin-top: 20px;
-    }
-    .social-links a {
-      color: #333;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 24px;
-    }
-    .projects-section {
-      margin-top: 40px;
-    }
-      .project {
-          margin: 30px;
-          padding: 24px;
-          background-color: #fff;
-          box-shadow: 0 0 12px rgba(0, 0, 0, .3);
-          border-radius: 15px;
-          text-align: left;
-          text-decoration: none;
-          width: 50%;
-      }
-    .project h2 {
-      margin-top: 0;
+    <style>
+        @font-face {
+            font-family: unnecessary;
+            src: url('assets/unnecessaryv3.ttf');
+        }
 
-    }
-    .project-description {
-      margin-top: 10px;
-    }
+        a {
+            text-decoration: none;
+            color: Black;
+        }
 
-      #giticon {
-          width: 40px;
-          height: auto;
-          top: -35px;
-          position: relative;
-          filter: invert(1);
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
 
-      #unnecessary-project {
-          background-image: linear-gradient(45deg, indianred, grey);
-      }
-      #unnecessary-project h2{
-          font-family: unnecessary;
-      }
-      #filez-project {
-          width: 70%;
-          background-image: linear-gradient(45deg, red, green, blue);
-      }
-      #filez-project img {
-          width: 50px;
-          padding-right: 14px;
-      }
-      #math-project {
-          width: 59%;
-          background-image: linear-gradient(45deg, yellow, #2196f3);
-      }
-          #math-project img {
-              width: 50px;
-              padding-right: 14px;
-          }
+        .header {
+            width: 100%;
+            height: 50px;
+            margin: 0 auto;
+            text-align: right;
+            background-color: #1e1e1e;
+        }
 
-          /* begin darkmode slider styles */
-      .slider-container {
-          display: flex;
-          align-items: center;
-          top: 13.5px;
-          position: relative;
-          left: 33px;
-          width: 50px;
-      }
+        .darkmode--activated .header {
+            background-color: #e1e1e1;
+        }
 
-      .switch {
-          position: relative;
-          display: inline-block;
-          width: 40px;
-          height: 20px;
-      }
-
-          .switch input[type="checkbox"] {
-              display: none;
-          }
-
-      .darkmodeSlider {
-          position: absolute;
-          cursor: pointer;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: #ccc;
-          transition: 0.4s;
-          border-radius: 20px;
-      }
-
-      .darkmodeSlider:before {
-          position: absolute;
-          content: "";
-          height: 18px;
-          width: 18px;
-          left: 2px;
-          bottom: 1px;
-          background-color: white;
-          transition: 0.4s;
-          border-radius: 50%;
-      }
-
-      input[type="checkbox"]:checked + .darkmodeSlider {
-          background-color: #ffd700;
-      }
-
-      input[type="checkbox"]:checked + .darkmodeSlider:before {
-          transform: translateX(18px);
-      }
-      #lightIcon {
-          align-items: center;
-          top: 13.5px;
-          position: absolute;
-          left: 7px;
-          width: 20px;
-          height: auto;
-          display: flex;
-          filter: invert(1);
-      }
-      #darkIcon {
-          align-items: center;
-          top: 13.5px;
-          position: absolute;
-          left: 81px;
-          width: 20px;
-          height: auto;
-          display: flex;
-          filter: invert(1);
-      }
+        .footer {
+            width: 100%;
+            height: 50px;
+            margin: 0 auto;
+            text-align: right;
+            background-color: #ffffff;
+        }
 
 
-      /* end darkmode slider styles */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .bio {
+            margin-top: 20px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+            .social-links a {
+                color: #333;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 24px;
+            }
+
+        .projects-section {
+            margin-top: 40px;
+        }
+
+        .project {
+            margin: 30px;
+            padding: 24px;
+            background-color: #fff;
+            box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+            border-radius: 15px;
+            text-align: left;
+            text-decoration: none;
+            width: 50%;
+        }
+
+            .project h2 {
+                margin-top: 0;
+            }
+
+        .project-description {
+            margin-top: 10px;
+        }
+
+        #giticon {
+            width: 40px;
+            height: auto;
+            top: -35px;
+            position: relative;
+            filter: invert(1);
+        }
+
+        #unnecessary-project {
+            background-image: linear-gradient(45deg, indianred, grey);
+        }
+
+            #unnecessary-project h2 {
+                font-family: unnecessary;
+            }
+
+        #filez-project {
+            width: 70%;
+            background-image: linear-gradient(45deg, red, green, blue);
+        }
+
+            #filez-project img {
+                width: 50px;
+                padding-right: 14px;
+            }
+
+        #math-project {
+            width: 59%;
+            background-image: linear-gradient(45deg, yellow, #2196f3);
+        }
+
+            #math-project img {
+                width: 50px;
+                padding-right: 14px;
+            }
 
 
-  </style>
+        #projects-container {
+            
+        }
+
+        .projectBanner {
+            text-align: left;
+            padding-left: 31px;
+        }
+
+
+        /* begin darkmode slider styles */
+        .slider-container {
+            display: flex;
+            align-items: center;
+            top: 13.5px;
+            position: relative;
+            left: 33px;
+            width: 50px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+            .switch input[type="checkbox"] {
+                display: none;
+            }
+
+        .darkmodeSlider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 20px;
+        }
+
+            .darkmodeSlider:before {
+                position: absolute;
+                content: "";
+                height: 18px;
+                width: 18px;
+                left: 2px;
+                bottom: 1px;
+                background-color: white;
+                transition: 0.4s;
+                border-radius: 50%;
+            }
+
+        input[type="checkbox"]:checked + .darkmodeSlider {
+            background-color: #ffd700;
+        }
+
+            input[type="checkbox"]:checked + .darkmodeSlider:before {
+                transform: translateX(18px);
+            }
+
+        #lightIcon {
+            align-items: center;
+            top: 13.5px;
+            position: absolute;
+            left: 7px;
+            width: 20px;
+            height: auto;
+            display: flex;
+            filter: invert(1);
+        }
+
+        #darkIcon {
+            align-items: center;
+            top: 13.5px;
+            position: absolute;
+            left: 81px;
+            width: 20px;
+            height: auto;
+            display: flex;
+            filter: invert(1);
+        }
+
+
+        /* end darkmode slider styles */
+
+
+    </style>
 
 
 
@@ -210,65 +249,74 @@
         <img src="assets/pfp.jpg" alt="Mega_TheLEGEND" class="profile-image">
         <h1>Mega_TheLEGEND</h1>
         <p class="bio">Passionate about coding, gaming, and technology. Turning boredom into code!</p>
-
-        <div class="projects-section">
-            <div id="math-project" class="project">
-                <h2><img src="https://raw.githubusercontent.com/MegaTheLEGEND/legend/main/EmbeddedImage.png" alt=""><a href="https://math-assist.github.io">MATH.assist</a></h2>
-                <p class="project-description">Games website with educational math games.</p>
+        <br>
+        <br>
+        <div id="projects-container">
+            <h2 class="projectBanner">Projects</h2>
+            <div class="projects-section">
+                <div id="math-project" class="project">
+                    <h2><img src="https://raw.githubusercontent.com/MegaTheLEGEND/legend/main/EmbeddedImage.png" alt=""><a href="https://math-assist.github.io">MATH.assist</a></h2>
+                    <p class="project-description">Games website with educational math games.</p>
+                </div>
+                <div id="filez-project" class="project">
+                    <h2><img src="assets/Z.png" alt=""><a href="https://megathelegend.github.io/FileZ-client">File-Z</a></h2>
+                    <p class="project-description">Another games website running in the file:// protocol.</p>
+                </div>
+                <div id="unnecessary-project" class="project">
+                    <h2><a href="https://megathelegend.github.io/unnecessary">Unnecessary</a></h2>
+                    <p class="project-description">A full langauge.</p>
+                </div>
+                <!-- Add more projects as needed -->
             </div>
-            <div id="filez-project" class="project">
-                <h2><img src="assets/Z.png" alt=""><a href="https://megathelegend.github.io/FileZ-client">File-Z</a></h2>
-                <p class="project-description">Another games website running in the file:// protocol.</p>
-            </div>
-            <div id="unnecessary-project" class="project">
-                <h2><a  href="https://megathelegend.github.io/unnecessary">Unnecessary</a></h2>
-                <p class="project-description">A full langauge.</p>
-            </div>
-            <!-- Add more projects as needed -->
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script>
-            const options = {
-                bottom: '32px', // default: '32px'
-                right: 'unset', // default: '32px'
-                left: '32px', // default: 'unset'
-                time: '0.5s', // default: '0.3s'
-                mixColor: '#fff', // default: '#fff'
-                backgroundColor: '#fff',  // default: '#fff'
-                buttonColorDark: '#0d1117',  // default: '#100f2c'
-                buttonColorLight: 'white', // default: '#fff'
-                saveInCookies: true, // default: true,
-                label: '🌓', // default: ''
-                autoMatchOsTheme: true // default: true
-            }
 
-            const darkmode = new Darkmode(options);
-            
-        const slider = document.getElementById('darkmodeSlider');
+    <div class="footer" alt="this is where the feet go!">
 
-        slider.addEventListener('click', () => {
-            
-            if (slider.checked) {
-                darkmode.toggle();
-                console.log('Slider is ON');
-            } else {
-                darkmode.toggle();
-                console.log('Slider is OFF');
-            }
-        });
-
-
-        window.addEventListener('load', () => {
-
-                const darkModeActivated = document.body.classList.contains('darkmode--activated');
-                slider.checked = darkModeActivated;
-
-
-        });
-
-
-    </script>
-
+    </div>
 </body>
 </html>
+
+
+<script>
+    const options = {
+        bottom: '32px', // default: '32px'
+        right: 'unset', // default: '32px'
+        left: '32px', // default: 'unset'
+        time: '0.5s', // default: '0.3s'
+        mixColor: '#fff', // default: '#fff'
+        backgroundColor: '#fff',  // default: '#fff'
+        buttonColorDark: '#0d1117',  // default: '#100f2c'
+        buttonColorLight: 'white', // default: '#fff'
+        saveInCookies: true, // default: true,
+        label: '🌓', // default: ''
+        autoMatchOsTheme: true // default: true
+    }
+
+    const darkmode = new Darkmode(options);
+
+    const slider = document.getElementById('darkmodeSlider');
+
+    slider.addEventListener('click', () => {
+
+        if (slider.checked) {
+            darkmode.toggle();
+            console.log('Slider is ON');
+        } else {
+            darkmode.toggle();
+            console.log('Slider is OFF');
+        }
+    });
+
+
+    window.addEventListener('load', () => {
+
+        const darkModeActivated = document.body.classList.contains('darkmode--activated');
+        slider.checked = darkModeActivated;
+
+
+    });
+
+
+</script>
