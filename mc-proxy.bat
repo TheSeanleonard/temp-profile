@@ -1,7 +1,7 @@
 @echo off
 
 :: Set the server address
-set "germany-offshore.gl.at.ply.gg:3459"
+set "serverAddress=germany-offshore.gl.at.ply.gg:3459"
 
 Title Minecraft Bedrock Proxy [%serverAddress%]
 
