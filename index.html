@@ -1,427 +1,357 @@
 <!DOCTYPE html>
-
-<input type="checkbox" id="switch" checked>
- 
-<div class="container">
-  <div class="screen">
-  <div class="notbody">
-  <div class="noise1"></div>
-  
-  <div class="overlay" id="currentDirectory">404</div>
-  <div class="overlay1"></div>
-  <div class="terminal">
-    <h1>Error <span class="errorcode">404</span></h1>
-    <p class="output">The page you are looking for might have been removed, had its name changed, temporarily unavailable, or never existsted in the first place.</p>
-    <p class="output">Please try to <a onclick="goBack()">go back</a> or <a onclick="returnToHomepage()">return to the homepage</a>.</p>
-    <p class="output">Good luck.</p>
-  </div>
- </div>
-</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega_TheLEGEND - About Me</title>
 
 
+    <style>
+        @font-face {
+            font-family: unnecessary;
+            src: url('assets/unnecessaryv3.ttf');
+        }
 
-</div>
+        @font-face {
+            font-family: ubuntu;
+            src: url('assets/Ubuntu-Regular.ttf');
+        }
+        
+        @font-face {
+            font-family: ubuntu-light;
+            src: url('assets/Ubuntu-Light.ttf');
+        }
+
+        a {
+            text-decoration: none;
+            color: Black;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            width: 100%;
+            height: 50px;
+            margin: 0 auto;
+            text-align: right;
+            background-color: #1e1e1e;
+        }
+
+        .darkmode--activated .header {
+            background-color: #e1e1e1;
+        }
+
+        .footer {
+            width: 100%;
+            height: 50px;
+            margin: 0 auto;
+            text-align: right;
+            background-color: #ffffff;
+        }
 
 
-<style>
+        .container {
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .aka {
+            font-family: ubuntu-light;
+        }
 
 
-html, body {
-    height: 100%;
-    margin: 0;
-}
 
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
- @import 'https://fonts.googleapis.com/css?family=Inconsolata';
-body {
-    background: #111;
-    color: white;
-    padding: 0; /* Remove padding to allow the container to fill the screen */
-}
- #switch {
-	 display: none;
-}
- .switch-label {
-	 display: inline-block;
-	 cursor: pointer;
-	 background: #fff;
-	 color: #111;
-	 padding: 10px;
-	 padding-left: 15px;
-	 padding-right: 15px;
-	 border-radius: 5px;
-	 margin-top: 10px;
-	 box-shadow: 0 2px #666;
-}
- .switch-label::after {
-	 content: "on";
-}
- .switch-label::before {
-	 content: " ";
-	 display: inline-block;
-	 border-radius: 100%;
-	 width: 10px;
-	 height: 10px;
-	 background: #003321;
-	 margin-right: 10px;
-	 border: 1px solid #111;
-}
- .switch-label:active {
-	 box-shadow: none;
-	 transform: translate3d(0, 2px, 0);
-}
- #switch:checked + .switch-label::before {
-	 background: #2f5;
-}
- #switch:checked + .switch-label::after {
-	 content: "off";
-}
- @keyframes flicker {
-	 0% {
-		 opacity: 1153414644;
-	}
-	 5% {
-		 opacity: 646811199;
-	}
-	 10% {
-		 opacity: 916766803;
-	}
-	 15% {
-		 opacity: 931041986;
-	}
-	 20% {
-		 opacity: 1839339766;
-	}
-	 25% {
-		 opacity: 1397674542;
-	}
-	 30% {
-		 opacity: 1765021618;
-	}
-	 35% {
-		 opacity: 1298018513;
-	}
-	 40% {
-		 opacity: 1187112249;
-	}
-	 45% {
-		 opacity: 272245069;
-	}
-	 50% {
-		 opacity: 52889556;
-	}
-	 55% {
-		 opacity: 654365070;
-	}
-	 60% {
-		 opacity: 849113537;
-	}
-	 65% {
-		 opacity: 877906119;
-	}
-	 70% {
-		 opacity: 74854839;
-	}
-	 75% {
-		 opacity: 578841876;
-	}
-	 80% {
-		 opacity: 412136022;
-	}
-	 85% {
-		 opacity: 1602971355;
-	}
-	 90% {
-		 opacity: 812110978;
-	}
-	 95% {
-		 opacity: 401466674;
-	}
-	 100% {
-		 opacity: 2136412380;
-	}
-}
-.container {
-    background: #121010;
-    width: 100%; /* Use full width */
-    height: 100%; /* Use full height */
-    position: relative;
-    overflow: hidden;
-}
- .container::after {
-	 content: " ";
-	 display: block;
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 bottom: 0;
-	 right: 0;
-	 background: rgba(18, 16, 16, 0.1);
-	 opacity: 0;
-	 z-index: 2;
-	 pointer-events: none;
-}
- .container::before {
-	 content: " ";
-	 display: block;
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 bottom: 0;
-	 right: 0;
-	 
-	 z-index: 2;
-	 background-size: 100% 2px, 3px 100%;
-	 pointer-events: none;
-}
- #switch:checked ~ .container::after {
-	 animation: flicker 0.15s infinite;
-}
- @keyframes turn-on {
-	 0% {
-		 transform: scale(1, 0.8) translate3d(0, 0, 0);
-		 -webkit-filter: brightness(30);
-		 filter: brightness(30);
-		 opacity: 1;
-	}
-	 3.5% {
-		 transform: scale(1, 0.8) translate3d(0, 100%, 0);
-	}
-	 3.6% {
-		 transform: scale(1, 0.8) translate3d(0, -100%, 0);
-		 opacity: 1;
-	}
-	 9% {
-		 transform: scale(1.3, 0.6) translate3d(0, 100%, 0);
-		 -webkit-filter: brightness(30);
-		 filter: brightness(30);
-		 opacity: 0;
-	}
-	 11% {
-		 transform: scale(1, 1) translate3d(0, 0, 0);
-		 -webkit-filter: contrast(0) brightness(0);
-		 filter: contrast(0) brightness(0);
-		 opacity: 0;
-	}
-	 100% {
-		 transform: scale(1, 1) translate3d(0, 0, 0);
-		 -webkit-filter: contrast(1) brightness(1.2) saturate(1.3);
-		 filter: contrast(1) brightness(1.2) saturate(1.3);
-		 opacity: 1;
-	}
-}
- @keyframes turn-off {
-	 0% {
-		 transform: scale(1, 1.3) translate3d(0, 0, 0);
-		 -webkit-filter: brightness(1);
-		 filter: brightness(1);
-		 opacity: 1;
-	}
-	 60% {
-		 transform: scale(1.3, 0.001) translate3d(0, 0, 0);
-		 -webkit-filter: brightness(10);
-		 filter: brightness(10);
-	}
-	 100% {
-		 animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-		 transform: scale(0, 0.0001) translate3d(0, 0, 0);
-		 -webkit-filter: brightness(50);
-		 filter: brightness(50);
-	}
-}
- .screen {
-	 width: 100%;
-	 height: 100%;
-	 border: none;
-}
- #switch ~ .container > .screen {
-	 animation: turn-off 0.55s cubic-bezier(0.23, 1, 0.32, 1);
-	 animation-fill-mode: forwards;
-}
- #switch:checked ~ .container > .screen {
-	 animation: turn-on 4s linear;
-	 animation-fill-mode: forwards;
-}
- @keyframes overlay-anim {
-	 0% {
-		 visibility: hidden;
-	}
-	 20% {
-		 visibility: hidden;
-	}
-	 21% {
-		 visibility: visible;
-	}
-	 100% {
-		 visibility: hidden;
-	}
-}
-.overlay {
-    color: #0f0;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 60px;
-    visibility: hidden;
-    pointer-events: none;
-    font-family: 'Roboto', sans-serif;
-}
+        .bio {
+            margin-top: 20px;
+        }
 
-#switch:checked ~ .container .overlay {
-    animation: overlay-anim 5s linear 2s; /* 5s duration with 2s delay */
-    animation-fill-mode: forwards;
-}
- .notbody {
-	 box-sizing: border-box;
-	 height: 100%;
-	 background-color: #000;
-	 background-image: radial-gradient(#002d08, #001103), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
-	 background-repeat: no-repeat;
-	 background-size: cover;
-	 font-family: 'Inconsolata', Helvetica, sans-serif;
-	 font-size: 1.5rem;
-	 color: rgba(51, 255, 51, .8);
-	 text-shadow: 0 0 1ex rgba(51, 255, 51, 1), 0 0 2px rgba(255, 255, 255, 0.8);
-}
- .noise1 {
-	 pointer-events: none;
-	 position: absolute;
-	 width: 100%;
-	 height: 100%;
-	 background-image: url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
-	 background-repeat: no-repeat;
-	 background-size: cover;
-	z-index: 100;
-	 opacity: 0.02;
-}
- .overlay1 {
-	 pointer-events: none;
-	 position: absolute;
-	 width: 100%;
-	 height: 100%;
-	 background: repeating-linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
-	 background-size: auto 4px;
-	 z-index: 1;
-}
- .overlay1::before {
-	 content: "";
-	 pointer-events: none;
-	 position: absolute;
-	 display: block;
-	 top: 0;
-	 left: 0;
-	 right: 0;
-	 bottom: 0;
-	 width: 100%;
-	 height: 100%;
-	 background-image: linear-gradient(0deg, transparent 0%, rgba(32, 80, 32, 0.2) 2%, rgba(32, 80, 32, 0.8) 3%, rgba(32, 80, 32, 0.2) 3%, transparent 100%);
-	 background-repeat: no-repeat;
-	 animation: scan 7.5s linear 0s infinite;
-}
- @keyframes scan {
-	 0% {
-		 background-position: 0 -100vh;
-	}
-	 35%, 100% {
-		 background-position: 0 100vh;
-	}
-}
- .terminal {
-	 box-sizing: inherit;
-	 position: absolute;
-	 height: 100%;
-	 width: 1000px;
-	 max-width: 100%;
-	 padding: 4rem;
-	 text-transform: uppercase;
-}
- .output {
-	 color: rgba(128, 255, 128, 0.8);
-	 text-shadow: 0 0 1px rgba(51, 255, 51, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
-}
- .output::before {
-	 content: "> ";
-}
-/* .input {
-	 color: rgba(192, 255, 192, 0.8);
-	 text-shadow: 0 0 1px rgba(51, 255, 51, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
-}
- .input::before {
-	 content: "$ ";
-}
- */
- a {
-	 color: #fff;
-	 text-decoration: none;
-}
- a::before {
-	 content: "[";
-}
- a::after {
-	 content: "]";
-}
- .errorcode {
-	 color: white;
-}
- 
-</style>
+        .social-links {
+            margin-top: 20px;
+        }
+
+            .social-links a {
+                color: #333;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 24px;
+            }
+
+        .projects-section {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            margin: 30px;
+            padding: 24px;
+            background-color: #fff;
+            box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+            border-radius: 15px;
+            text-align: left;
+            text-decoration: none;
+            width: 50%;
+        }
+
+            .project h2 {
+                margin-top: 0;
+            }
+
+        .project-description {
+            margin-top: 10px;
+        }
+
+        #giticon {
+            width: 40px;
+            height: auto;
+            top: -35px;
+            position: relative;
+            filter: invert(1);
+        }
+
+        #unnecessary-project {
+            background-image: linear-gradient(45deg, indianred, grey);
+            width: 54%;
+        }
+
+            #unnecessary-project h2 {
+                font-family: unnecessary;
+            }
+
+        #filez-project {
+            width: 70%;
+            background-image: linear-gradient(45deg, red, green, blue);
+        }
+
+            #filez-project img {
+                width: 50px;
+                padding-right: 14px;
+            }
+
+        #math-project {
+            width: 59%;
+            background-image: linear-gradient(45deg, yellow, #2196f3);
+        }
+
+            #math-project img {
+                width: 50px;
+                padding-right: 14px;
+            }
+
+        #mci-project {
+            width: 68%;
+            background-image: linear-gradient(45deg, #1b23ff, #00ff0c);
+        }
+            #mci-project img {
+                width: 63px;
+                padding-right: 0px;
+            }
+
+
+        #projects-container {
+            
+        }
+
+        .projectBanner {
+            text-align: left;
+            padding-left: 31px;
+        }
+
+
+
+
+        /* begin darkmode slider styles */
+        .slider-container {
+            display: flex;
+            align-items: center;
+            top: 13.5px;
+            position: relative;
+            left: 33px;
+            width: 50px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+            .switch input[type="checkbox"] {
+                display: none;
+            }
+
+        .darkmodeSlider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 20px;
+        }
+
+            .darkmodeSlider:before {
+                position: absolute;
+                content: "";
+                height: 18px;
+                width: 18px;
+                left: 2px;
+                bottom: 1px;
+                background-color: white;
+                transition: 0.4s;
+                border-radius: 50%;
+            }
+
+        input[type="checkbox"]:checked + .darkmodeSlider {
+            background-color: #ffd700;
+        }
+
+            input[type="checkbox"]:checked + .darkmodeSlider:before {
+                transform: translateX(18px);
+            }
+
+        #lightIcon {
+            align-items: center;
+            top: 13.5px;
+            position: absolute;
+            left: 7px;
+            width: 20px;
+            height: auto;
+            display: flex;
+            filter: invert(1);
+        }
+
+        #darkIcon {
+            align-items: center;
+            top: 13.5px;
+            position: absolute;
+            left: 81px;
+            width: 20px;
+            height: auto;
+            display: flex;
+            filter: invert(1);
+        }
+
+
+        /* end darkmode slider styles */
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <div class="header">
+        <img id="lightIcon" src="assets/light-mode.svg" alt="lightIcon">
+        <div class="slider-container">
+            <label class="switch">
+                <input type="checkbox" id="darkmodeSlider">
+                <span class="darkmodeSlider"></span>
+            </label>
+        </div>
+        <img id="darkIcon" src="assets/dark-mode.png" alt="darkIcon">
+        <div class="social-links">
+            <a href="https://github.com/MegaTheLEGEND" target="_blank" rel="noopener noreferrer">
+                <img id="giticon" src="assets/github-icon.png" alt="GitHub">
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="assets/pfp.jpg" alt="Mega_TheLEGEND" class="profile-image">
+        <h1>Sean</h1>
+        <h2 class="aka">AKA Mega_TheLEGEND</h2>
+        <p class="bio">Passionate about coding, gaming, and technology. Turning boredom into code!</p>
+        <br>
+        <br>
+        <div id="projects-container">
+            <h2 class="projectBanner">Projects</h2>
+            <div class="projects-section">
+                <div id="math-project" class="project" onclick=location.href='https://math-assist.github.io'>
+                    <h2><img src="https://raw.githubusercontent.com/MegaTheLEGEND/legend/main/EmbeddedImage.png" alt=""><a href="https://math-assist.github.io">MATH.assist</a></h2>
+                    <p class="project-description">Games website with "educational math" games.</p>
+                </div>
+                <div id="filez-project" class="project" onclick=location.href='https://megathelegend.github.io/FileZ-client'>
+                    <h2><img src="assets/Z.png" alt=""><a href="https://megathelegend.github.io/FileZ-client">File-Z</a></h2>
+                    <p class="project-description">Another games website running in the file:// protocol.</p>
+                </div>
+                <div id="mci-project" class="project" onclick=location.href='https://mega-chaos-industries.github.io'>
+                    <h2><img src="assets/mci.png" alt=""><a href="https://mega-chaos-industries.github.io">Mega Chaos Industries</a></h2>
+                    <p class="project-description">My small company. (that i'm the co-founder of) I also do the web developement for it. (to lazy to start)</p>
+                </div>
+                <div id="unnecessary-project" class="project" onclick=location.href='https://megathelegend.github.io/unnecessary'>
+                    <h2><a href="https://megathelegend.github.io/unnecessary">Unnecessary</a></h2>
+                    <p class="project-description">Just a full langauge using glyphs originaly drawn by Avery.</p>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+    <div class="footer" alt="this is where the feet go!">
+
+    </div>
+</body>
+</html>
 
 
 <script>
-  function turnOnCRT() {
-    document.getElementById('switch').checked = true;
-  }
-
-  function turnOffCRT() {
-    document.getElementById('switch').checked = false;
-  }
-  
-  
-function goBack() {
-    turnOffCRT(); // Turn off CRT first
-    setTimeout(() => {
-        if (document.referrer === window.location.href) {
-            turnOnCRT(); // Restart CRT if redirection did not occur
-        } else {
-            window.history.back(); // Go back if redirection occurred
-        }
-    }, 500);
-}
-
-function returnToHomepage() {
-    turnOffCRT(); // Turn off CRT first
-    setTimeout(() => {
-        if (document.referrer === window.location.href) {
-            turnOnCRT(); // Restart CRT if redirection did not occur
-        } else {
-            window.location.href = '/'; // Redirect if not already on the homepage
-        }
-    }, 500);
-}
-window.onload = function() {
-    turnOnCRT();
-    updateCurrentDirectory(); // Update overlay with the current directory
-};
-
-function updateCurrentDirectory() {
-    const path = window.location.pathname; // Get the current pathname
-    document.getElementById('currentDirectory').textContent = path; // Set overlay text
-}
-
-
-// Event listener for pageshow
-window.addEventListener('pageshow', function(event) {
-    if (event.persisted) {
-        turnOnCRT();
-        updateCurrentDirectory(); // Update overlay if page is loaded from cache
+    const options = {
+        bottom: '32px', // default: '32px'
+        right: 'unset', // default: '32px'
+        left: '32px', // default: 'unset'
+        time: '0.5s', // default: '0.3s'
+        mixColor: '#fff', // default: '#fff'
+        backgroundColor: '#fff',  // default: '#fff'
+        buttonColorDark: '#0d1117',  // default: '#100f2c'
+        buttonColorLight: 'white', // default: '#fff'
+        saveInCookies: true, // default: true,
+        label: '🌓', // default: ''
+        autoMatchOsTheme: true // default: true
     }
-});
 
-// Event listener for visibility change
-document.addEventListener('visibilitychange', function() {
-    if (document.visibilityState === 'visible') {
-        turnOnCRT(); // Turn on CRT when the page becomes visible
-        updateCurrentDirectory(); // Update overlay when the page becomes visible
-    }
-});
+    const darkmode = new Darkmode(options);
+
+    const slider = document.getElementById('darkmodeSlider');
+
+    slider.addEventListener('click', () => {
+
+        if (slider.checked) {
+            darkmode.toggle();
+            console.log('Slider is ON');
+        } else {
+            darkmode.toggle();
+            console.log('Slider is OFF');
+        }
+    });
+
+
+    window.addEventListener('load', () => {
+
+        const darkModeActivated = document.body.classList.contains('darkmode--activated');
+        slider.checked = darkModeActivated;
+
+
+    });
+
+
 </script>
